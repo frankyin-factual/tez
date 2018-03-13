@@ -165,6 +165,11 @@ public class JobContextImpl implements JobContext {
     return conf.getJobName();
   }
 
+  @Override
+  public boolean userClassesTakesPrecedence() {
+    return conf.userClassesTakesPrecedence();
+  }
+
   /**
    * Get the {@link InputFormat} class for the job.
    * 

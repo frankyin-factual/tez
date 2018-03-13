@@ -184,7 +184,7 @@ public class MRHelpers {
         // Unset will unset the deprecated keys and all it's variants.
         final String mrValue = conf.get(dep.getKey());
         final String tezValue = conf.get(dep.getValue());
-        conf.unset(dep.getKey());
+
         if (tezValue == null) {
           conf.set(dep.getValue(), mrValue, "TRANSLATED_TO_TEZ");
         } else if (!preferTez) {
